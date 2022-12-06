@@ -1,0 +1,43 @@
+.list-group.mb-3
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= product.class.human_attribute_name(:id)
+      .col-md-9
+        = product.id
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= product.class.human_attribute_name(:title)
+      .col-md-9
+        = product.title
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= product.class.human_attribute_name(:price)
+      .col-md-9
+        = product.price
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= product.class.human_attribute_name(:created_at)
+      .col-md-9
+        = product.created_at
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= product.class.human_attribute_name(:updated_at)
+      .col-md-9
+        = product.updated_at
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= product.class.human_attribute_name(:photo)
+      .col-md-9
+        - if product.photo.attached?
+          = link_to url_for(product.photo), target: '_blank' do
+            - if product.photo.blob.image?
+              = image_tag(product.photo, class: 'img-fluid')
+            - else
+              = product.photo.filename
+

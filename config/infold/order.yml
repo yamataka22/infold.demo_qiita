@@ -1,0 +1,35 @@
+model:
+  association:
+    customer:
+      kind: belongs_to
+      name_field: name
+    order_details:
+      kind: has_many
+      dependent: destroy
+      model:
+        validate:
+          product: presence
+        association:
+          product:
+            kind: belongs_to
+            name_field: title
+app:
+  show:
+    fields:
+      - id
+      - customer
+      - order_details:
+          fields:
+            - product
+            - amount
+  form:
+    fields:
+      - customer:
+          kind: association_search
+      - order_details:
+          kind: association
+          fields:
+            - product:
+                kind: select
+            - amount:
+                kind: number

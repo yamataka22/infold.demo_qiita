@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    attributes:
+      customer:
+        name: 氏名
+        address: 住所
+        gender: 性別
+  enums:
+    admin:
+      customer:
+        gender:
+          male: 男性
+          female: 女性
+          other: その他

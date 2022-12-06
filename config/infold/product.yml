@@ -1,0 +1,18 @@
+model:
+  active_storage:
+    photo:
+      kind: image
+app:
+  index:
+    list:
+      fields:
+        - id
+        - title
+        - photo
+        - price
+  form:
+    fields:
+      - title
+      - photo:
+          kind: file
+      - price

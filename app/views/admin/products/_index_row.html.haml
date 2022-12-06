@@ -1,0 +1,21 @@
+%tr{ id: dom_id(product) }
+  %td.icon_cell
+    = link_to admin_product_path(product), class: 'd-block', data: { turbo_frame: 'modal_main' } do
+      %i.bi.bi-file-text.h3
+  %td
+    = product.id
+  %td
+    = product.title
+  %td.image_cell
+    - if product.photo.attached?
+      = link_to url_for(product.photo), target: '_blank' do
+        - if product.photo.blob.image?
+          = image_tag(product.photo, class: 'img-fluid')
+        - else
+          = product.photo.filename
+
+  %td
+    = product.price
+  %td.icon_cell
+    = link_to edit_admin_product_path(product), class: 'd-block', data: { turbo_frame: "modal_main" } do
+      %i.bi.bi-pencil-square.h3

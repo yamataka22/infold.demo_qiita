@@ -1,0 +1,25 @@
+model:
+  validate:
+    name: presence
+  enum:
+    gender:
+      male: 1
+      female: 2
+      other: 3
+app:
+  form:
+    fields:
+      - name
+      - address
+      - gender:
+          kind: radio
+  association_search:
+    conditions:
+      - id:
+          sign: eq
+      - name:
+          sign: full_like
+    list:
+      fields:
+        - id
+        - name

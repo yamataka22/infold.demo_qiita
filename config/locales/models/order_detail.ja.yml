@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      order_detail: 注文明細
+    attributes:
+      order_detail:
+        order_id: 注文
+        product_id: 商品
+        amount: 個数

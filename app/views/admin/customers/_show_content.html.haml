@@ -1,0 +1,37 @@
+.list-group.mb-3
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= customer.class.human_attribute_name(:id)
+      .col-md-9
+        = customer.id
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= customer.class.human_attribute_name(:name)
+      .col-md-9
+        = customer.name
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= customer.class.human_attribute_name(:address)
+      .col-md-9
+        = customer.address
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= customer.class.human_attribute_name(:gender)
+      .col-md-9
+        = customer.gender_i18n
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= customer.class.human_attribute_name(:created_at)
+      .col-md-9
+        = customer.created_at
+  .list-group-item
+    .row
+      .col-md-3
+        .text-muted.fw-bold= customer.class.human_attribute_name(:updated_at)
+      .col-md-9
+        = customer.updated_at

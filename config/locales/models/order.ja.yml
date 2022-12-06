@@ -1,0 +1,5 @@
+ja:
+  activerecord:
+    attributes:
+      order:
+        customer_id: 顧客

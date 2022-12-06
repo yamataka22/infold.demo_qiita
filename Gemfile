@@ -69,8 +69,6 @@ group :test do
 end
 
 gem 'infold', require: false
-
-# 以下も追加でインストールします
 gem 'devise'           # 認証
 gem 'haml-rails'       # HAML
 gem 'kaminari'         # ページネーション

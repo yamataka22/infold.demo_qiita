@@ -1,0 +1,15 @@
+%tr{ id: dom_id(order) }
+  %td.icon_cell
+    = link_to admin_order_path(order), class: 'd-block', data: { turbo_frame: 'modal_main' } do
+      %i.bi.bi-file-text.h3
+  %td
+    = order.id
+  %td
+    = order.created_at
+  %td
+    = order.updated_at
+  %td
+    = link_to order.customer.name, admin_customer_path(order.customer), data: { turbo_frame: 'modal_sub' } if order.customer
+  %td.icon_cell
+    = link_to edit_admin_order_path(order), class: 'd-block', data: { turbo_frame: "modal_main" } do
+      %i.bi.bi-pencil-square.h3
